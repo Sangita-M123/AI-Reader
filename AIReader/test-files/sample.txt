@@ -1,0 +1,15 @@
+Welcome to AI Document Reader!
+
+This is a sample text document to test the AI-powered document processing system.
+
+Key Features:
+1. Document Summarization - Get intelligent summaries of long documents
+2. Code Explanation - Understand programming code in plain English
+3. Audio Output - Listen to your documents with text-to-speech
+4. Multi-Format Support - Works with PDF, Word, PowerPoint, and code files
+
+The AI Document Reader uses advanced Natural Language Processing (NLP) techniques to analyze and process your documents. It can extract key information, generate summaries, and even explain complex code in simple terms.
+
+This application showcases modern web development technologies including React.js, Node.js, Python FastAPI, and various AI/ML libraries. It's designed to be user-friendly, fast, and efficient.
+
+Try uploading this file to see the AI in action!

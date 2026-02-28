@@ -1,0 +1,81 @@
+📋 DetailedTaskBreakdown – CloudBlitz EnquiryManag ementSystem
+
+🎯 Project Goal
+BuildaFullstack Enquiry Manag ementSystem withReact + V ite (Frontend) and Node .js + Expr ess + Mong oDB (Back end).
+
+⚡ ImportantInstruction:
+We needadev eloperwhoisane xpertinAI-po wereddevelopmenttools (Cursor , GitHub Copilot , Codeium, Min tlify, Tabnine , etc.). AI tools shouldbethe primary appr oachforscaffolding, r efactoring, documen tation, and testing. Manual coding should onlybedonetoreﬁneoroptimizeAI-g ener ated output . Thedeveloper shouldproactivelye xploreand applythemaximum possibleAIassistance throughoutthepr ojectlifecycle.
+
+🔹 EPIC 1: P roject Setup
+
+Story 1.1 – Repository & Workﬂow Setup
+Create GitHubrepo withfrontendandbackendf olders . Setupbranchingstrategy (Gitﬂo w). Add . gitignor e, README .md, LICENSE . Con ﬁgureESLin t + P rettier withTypeScript support . Add Husky + lin t-stagedf orpre-commit hooks .
+
+Story 1.2 – Frontend Initialization
+InitializeReact 18 + V ite + T ypeScriptproject . Installandcon ﬁgureTailwind CSS , Radix UI, LucideReact , ClassVariance Authority , Tailwind Anima te. Setupfolder structur e (componen ts, pag es, layouts , routes). AddReactRouterDOMandcreate starterla yout.
+
+Story 1.3 – Backend Initialization
+InitializeNode .js (T ypeScript) + Expresspr oject . Setupfolder structur e (con trollers , models , routes, middlew ares). Install dependencies: e xpress, mong oose , zod, cors , dot env, json webtoken, bcryptjs . Create base Expressserverwith / api/healthroute.
+
+🔹 EPIC 2: Authen tication & Authoriza tion
+
+Story 2.1 – Backend Auth APIs
+Create User schema: name , email , pass wordHash, r ole, timestamps . Implementroutes: POS T /auth/ registerPOST /auth/loginGET / auth/ me ImplementJWT authen tication & r ole-based access middlew are.
+
+Story 2.2 – Frontend Auth Pages
+CreateLogin & R egisterpages. Handletokenstorage (localSt orage/sessionSt orage). ImplementProtectedRoutes withReactRouter.
+
+🔹 EPIC 3: Enquiry Manag ementStory 3.1 – Backend CRUD APIs
+Create Enquiry schema: cust omerName , email , phone , messag e, sta tus, assignedT o, timestamps . Implementroutes: POS T /enquiries GET / enquiries (with ﬁlt ers) GET / enquiries/:id PUT / enquiries/:id DELETE / enquiries/:id (softdelet e).
+
+Story 3.2 – Frontend Dashboard
+Create Dashboardwith tabsfor: A ll, New , InProgress, Closed. Add sear ch + ﬁlterfunctionality . Displayenquiriesina table/list view . Add actions: V iew, Edit , Delet e.
+
+Story 3.3 – Enquiry Forms & Modals
+CreateAddEnquiryform withvalida tion. Create Edit Enquiry modalforstatus/assignee upda tes. AddToast notiﬁca tionsfor actions .
+
+🔹 EPIC 4: User Manag emen t (Admin Only)
+
+Story 4.1 – Backend User APIs
+Implementroutes: GET / usersPOST /users PUT / users/:id DELETE / users/:id
+
+Story 4.2 – Frontend User Page
+Create User Manag ementpagewith user table . Add actions: Cr eate, Edit , Deleteusers . Allow assigning enquiriestostaffusers .
+
+🔹 EPIC 5: In frastructur e & Deplo ymentStory 5.1 – Dockerization
+Create Dock erﬁlefor back end. Create Dock erﬁleforfrontend (with Nginx). Create dock er-compose .ymlfor localdevwith Mong oDB .
+
+Story 5.2 – Deployment
+Setup . env ﬁlesfor dev /prod. Deployback end (Node + Mong oDB) on cloud. DeployfrontendonV ercel/Netlif y/Cloud. Con ﬁgurepr operenvironmen t-basedAPIbase URLs .
+
+🔹 EPIC 6: Documen tation & T esting
+
+Story 6.1 – API Documentation
+Auto-generateAPI documen tation. ProvidePostman collectionorAPIdocsit e.
+
+Story 6.2 – Testing
+Setup Jest + Supertestf or back end. Write unittestsfor models & con trollers . Write integrationtestsfor auth + enquiryworkﬂo ws.
+
+Story 6.3 – Final Documentation
+CompleteREADME .md with setupsteps. Adddeveloper guide (howto run, t est, deplo y). Includesystemarchit ecturediagr am.
+
+✅ Final Deliv erables
+1. Full sourcecode (fr ontend + back end).
+2. Dock erized setup with Mong oDB .
+3. API documen tation.
+4. Test suit e (unit + in tegration).
+5. Deplo ymen t-ready build.
+6. Dev eloper documen tation.
+
+Credentials & Access
+Sharethefollowingafter deplo ymen t:
+- PublicURLto accesstheCRM.
+- Adminlogincreden tials (def ault admin user).
+- Serverlogincreden tials (EC2/Ligh tsail SSH).
+- Database connection details (if self -host ed, notAtlas).
+
+⚡ ReminderforDeveloper:
+ThisprojectisAI-ﬁrst . Wearenot just lookingforacoder , butfor someonewhocan:
+- UseAIdev elopmenttoolsexpertly .
+- Save timebygener ating, r efactoring, and documen ting code with AI.
+- TreatAIasacollabor atorindev elopmen t, not justahelper .

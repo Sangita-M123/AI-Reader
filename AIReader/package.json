@@ -1,0 +1,42 @@
+{
+  "name": "ai-document-reader",
+  "version": "1.0.0",
+  "description": "AI-powered document reader with summarization and audio output",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run ai-service\"",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\" \"npm run start:ai\"",
+    "startup": "node start.js",
+    "build": "npm run build:client && npm run build:server && npm run build:ai",
+    "build:client": "cd frontend && npm run build",
+    "build:server": "echo 'Backend build complete'",
+    "build:ai": "echo 'AI service build complete'",
+    "start:server": "node backend/server.js",
+    "start:client": "cd frontend && npm run preview",
+    "start:ai": "cd ai-service && python -m uvicorn main:app --host 0.0.0.0 --port 8001",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm run dev",
+    "ai-service": "cd ai-service && python -m uvicorn main:app --reload --port 8001",
+    "install-all": "npm install && cd frontend && npm install && cd ../ai-service && pip install -r requirements.txt",
+    "clean": "rm -rf frontend/dist && rm -rf node_modules && rm -rf frontend/node_modules"
+  },
+  "keywords": ["ai", "ml", "document-reader", "nlp", "summarization"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "mongoose": "^7.5.0",
+    "axios": "^1.5.0",
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.6.0",
+    "socket.io": "^4.7.2",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  }
+}
