@@ -5,12 +5,22 @@ services:
     runtime: python-3.11.7
     region: oregon
     plan: free
+    rootDir: .
     buildCommand: |
       npm install
       npm install --prefix frontend
       pip install -r ai-service/requirements.txt
       npm run build
     startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: AI_SERVICE_URL
+        value: http://localhost:8001
+      - key: AI_SERVICE_PORT
+        value: 8001
     envVars:
       - key: NODE_ENV
         value: production
