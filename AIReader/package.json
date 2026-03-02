@@ -8,7 +8,7 @@
     "start": "concurrently \"npm run start:server\" \"npm run start:client\" \"npm run start:ai\"",
     "startup": "node start.js",
     "build": "npm run build:client && npm run build:server && npm run build:ai",
-    "build:client": "cd frontend && npm run build",
+    "build:client": "npm run build --prefix frontend",
     "build:server": "echo 'Backend build complete'",
     "build:ai": "echo 'AI service build complete'",
     "start:server": "node backend/server.js",
@@ -36,7 +36,9 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.0.1"
+  },
+  "optionalDependencies": {
     "concurrently": "^8.2.0"
   }
 }
