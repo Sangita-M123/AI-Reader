@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 5002;
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
+app.use('/audio', express.static(path.join(__dirname, '../ai-service/audio')));
 
 // Serve static files from frontend build (for production)
 if (process.env.NODE_ENV === 'production') {
@@ -159,6 +160,12 @@ app.post('/api/generate-audio', async (req, res) => {
       });
 
       console.log('Audio generated successfully');
+
+      // Replace localhost URL with backend URL for production
+      if (response.data.audioUrl) {
+        const audioFileName = response.data.audioUrl.split('/').pop();
+        response.data.audioUrl = `/audio/${audioFileName}`;
+      }
 
       res.json(response.data);
     } catch (aiError) {
